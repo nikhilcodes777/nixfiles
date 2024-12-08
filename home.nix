@@ -1,4 +1,4 @@
-{config, pkgs, ... }:
+{pkgs, ... }:
 
 {
   home.username = "nikhil";
@@ -11,6 +11,8 @@
   home.packages = with pkgs;[
     helix
     mpv
+    gh
+    nil
     yt-dlp
     fastfetch
     ranger
