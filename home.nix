@@ -17,6 +17,7 @@
     fastfetch
     ranger
     gcc
+    clang-tools
     unzip
     tmux
     kitty

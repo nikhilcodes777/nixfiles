@@ -36,19 +36,23 @@
     LC_TIME = "en_IN";
   };
 
-  # Enable the X11 windowing system.
-  services.xserver.enable = true;
+  services = {
+    xserver = {
+      enable =true;
+      displayManager.gdm.enable = true;
+      desktopManager.gnome.enable = true;
 
-  # Enable the GNOME Desktop Environment.
-  services.xserver.displayManager.gdm.enable = true;
-  services.xserver.desktopManager.gnome.enable = true;
-
-  # Configure keymap in X11
-  services.xserver.xkb = {
+    xkb = {
     layout = "us";
     variant = "";
   };
-programs.nix-ld.enable = true;
+    };
+
+    gnome.core-utilities.enable = false;
+  };
+
+
+  programs.nix-ld.enable = true;
 
   programs.nix-ld.libraries = with pkgs; [
 
@@ -57,8 +61,6 @@ programs.nix-ld.enable = true;
     # here, NOT in environment.systemPackages
 
   ];
-  # Enable CUPS to print documents.
-  #services.printing.enable = true;
 
   # Enable sound with pipewire.
   hardware.pulseaudio.enable = false;
@@ -104,6 +106,9 @@ programs.nix-ld.enable = true;
     wget
     git
     gnome-tweaks
+    evince
+    gnome-calendar
+    nautilus
     networkmanager-fortisslvpn
   ];
 
