@@ -13,6 +13,8 @@
     mpv
     gh
     nil
+    python3
+    python312Packages.python-lsp-server
     yt-dlp
     fastfetch
     ranger
