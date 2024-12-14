@@ -39,8 +39,8 @@
   services = {
     xserver = {
       enable =true;
-      displayManager.gdm.enable = true;
-      desktopManager.gnome.enable = true;
+      displayManager.sddm.enable = true;
+      desktopManager.plasma6.enable = true;
 
     xkb = {
     layout = "us";
@@ -48,7 +48,6 @@
   };
     };
 
-    gnome.core-utilities.enable = false;
   };
 
 
@@ -63,7 +62,14 @@
   ];
 
   # Enable sound with pipewire.
-  hardware.pulseaudio.enable = false;
+
+hardware = {
+  pulseaudio.enable = false;
+    bluetooth = {
+        enable = true;
+        settings.General.Experimental = true;
+    };
+};
   security.rtkit.enable = true;
   services.pipewire = {
     enable = true;
@@ -105,11 +111,6 @@
     neovim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     wget
     git
-    gnome-tweaks
-    evince
-    gnome-calendar
-    nautilus
-    networkmanager-fortisslvpn
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
