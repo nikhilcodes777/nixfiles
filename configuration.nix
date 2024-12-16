@@ -99,7 +99,7 @@ hardware = {
   };
 
   # Install firefox.
-  programs.firefox.enable = true;
+  #programs.firefox.enable = true;
   programs.fish.enable = true;
 
   # Allow unfree packages

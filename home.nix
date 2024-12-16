@@ -13,6 +13,7 @@
     mpv
     gh
     nil
+    nh
     python3
     python312Packages.python-lsp-server
     yt-dlp
@@ -48,6 +49,7 @@ afterglow-cursors-recolored
   };
   home.sessionVariables = {
     # EDITOR = "emacs";
+ FLAKE = "/home/nikhil/.nixfiles";
   };
   programs.home-manager.enable = true;
 }
