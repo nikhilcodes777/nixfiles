@@ -39,8 +39,6 @@
   services = {
     xserver = {
       enable =true;
-      displayManager.sddm.enable = true;
-      desktopManager.plasma6.enable = true;
 
     xkb = {
     layout = "us";
@@ -48,22 +46,17 @@
   };
     };
 
+      displayManager.sddm.enable = true;
+      desktopManager.plasma6.enable = true;
   };
 
 
-  programs.nix-ld.enable = true;
 
-  programs.nix-ld.libraries = with pkgs; [
-
-    # Add any missing dynamic libraries for unpackaged programs
-
-    # here, NOT in environment.systemPackages
-
-  ];
 
   # Enable sound with pipewire.
 
 hardware = {
+
   pulseaudio.enable = false;
     bluetooth = {
         enable = true;
@@ -93,9 +86,6 @@ hardware = {
     shell=pkgs.fish;
     description = "Nikhil";
     extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [
-      
-    ];
   };
 
   # Install firefox.
