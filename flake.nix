@@ -9,26 +9,33 @@
     };
   };
 
-  outputs = { self, nixpkgs,home-manager, ... }:
+  outputs =
+    {
+      self,
+      nixpkgs,
+      home-manager,
+      ...
+    }:
     let
       lib = nixpkgs.lib;
       system = "x86_64-linux";
 
-pkgs = import nixpkgs {
+      pkgs = import nixpkgs {
         system = system;
         config = {
           # Allow unfree packages
           allowUnfree = true;
         };
-};
-    in {
+      };
+    in
+    {
       nixosConfigurations = {
         nixos = lib.nixosSystem {
           #system = "x86_64-linux";
           inherit system;
           modules = [ ./configuration.nix ];
+        };
       };
-    };
 
       homeConfigurations."nikhil" = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
@@ -41,5 +48,5 @@ pkgs = import nixpkgs {
         # to pass through arguments to home.nix
       };
 
-  };
+    };
 }

@@ -1,4 +1,4 @@
-{pkgs, ... }:
+{ pkgs, ... }:
 
 {
   home.username = "nikhil";
@@ -8,7 +8,7 @@
 
   fonts.fontconfig.enable = true;
   programs.emacs.enable = true;
-  home.packages = with pkgs;[
+  home.packages = with pkgs; [
     helix
     mpv
     gh
@@ -17,6 +17,7 @@
     nodejs
     bun
     nil
+    nixfmt-rfc-style
     nh
     yt-dlp
     fastfetch
@@ -35,10 +36,8 @@
     wl-clipboard
     nerd-fonts.jetbrains-mono
     poppins
-nerd-fonts.fira-code
-afterglow-cursors-recolored
-
-
+    nerd-fonts.fira-code
+    afterglow-cursors-recolored
 
   ];
   programs.home-manager.enable = true;
