@@ -16,6 +16,9 @@
     direnv
     nodejs
     bun
+    tailwindcss-language-server
+    typescript-language-server
+    vscode-langservers-extracted
     nil
     nixfmt-rfc-style
     nh
