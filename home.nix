@@ -8,7 +8,8 @@
 
   fonts.fontconfig.enable = true;
   programs.emacs.enable = true;
-  imports = [./user/programs/yazi.nix
+  imports = [
+    ./user/programs/yazi.nix
     ./user/shell/sh.nix
   ];
   home.packages = with pkgs; [
