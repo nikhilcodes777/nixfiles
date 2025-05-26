@@ -8,8 +8,12 @@
 
   fonts.fontconfig.enable = true;
   programs.emacs.enable = true;
+  imports = [./user/yazi.nix];
   home.packages = with pkgs; [
-    helix
+    evil-helix
+    delta
+    gitui
+    wiki-tui
     mpv
     gh
     lazygit
