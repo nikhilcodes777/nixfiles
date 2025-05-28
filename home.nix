@@ -13,7 +13,7 @@
     ./user/shell/sh.nix
   ];
   home.packages = with pkgs; [
-    evil-helix
+    helix
     delta
     gitui
     wiki-tui
