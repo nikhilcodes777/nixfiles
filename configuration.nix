@@ -70,7 +70,10 @@
     #jack.enable = true;
 
   };
-
+  virtualisation.podman = {
+    enable = true;
+    dockerCompat = true;
+  };
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
 
@@ -95,9 +98,10 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    neovim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
+    neovim
     wget
     git
+    distrobox
   ];
 
   # List services that you want to enable:
