@@ -9,7 +9,7 @@
       log = {
         enabled = false;
       };
-      manager = {
+      mgr = {
         show_hidden = false;
         ratio = [
           1
@@ -33,7 +33,7 @@
           on = [ "<Esc>" ];
         }
       ];
-      manager.prepend_keymap = [
+      mgr.prepend_keymap = [
         {
           run = "escape";
           on = [ "<Esc>" ];

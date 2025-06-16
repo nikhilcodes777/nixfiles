@@ -15,6 +15,8 @@
   home.packages = with pkgs; [
     helix
     delta
+    hyperfine
+    onefetch
     gitui
     wiki-tui
     mpv

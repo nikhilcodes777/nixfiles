@@ -7,7 +7,7 @@ let
     md = "mkdir -p";
     nb = "newsboat";
     fm = "yazi";
-    vim = "nvim";
+    vim = "hx";
     cat = "bat";
     camtest = "mpv av://v4l2:/dev/video0 --profile=low-latency --untimed";
     gcd = "git clone --depth 1";
