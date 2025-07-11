@@ -1,0 +1,4 @@
+name: Echoo
+
+root_dir: ~/dev/echoo
+template: Web (bun)

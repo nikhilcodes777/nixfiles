@@ -1,0 +1,6 @@
+name: AI
+
+windows:
+  - name: code
+    panes:
+      - code .

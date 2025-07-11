@@ -1,0 +1,12 @@
+name: Web (yarn)
+
+windows:
+  - name: Code
+    panes:
+      - nvim -c Oil
+  - name: Dev
+    panes:
+      - yarn
+  - name: Dev-Server
+    panes:
+      - yarn dev

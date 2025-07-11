@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+
+export FZF_DEFAULT_OPTS="
+	--color=fg:#797593,bg:#faf4ed,hl:#d7827e
+	--color=fg+:#575279,bg+:#f2e9e1,hl+:#d7827e
+	--color=border:#dfdad9,header:#286983,gutter:#faf4ed
+	--color=spinner:#ea9d34,info:#56949f
+	--color=pointer:#907aa9,marker:#b4637a,prompt:#797593"
+
+# Use zoxide to interactively select a directory
+directory=$(zoxide query -i)
+
+# Check if a directory was selected
+if [ -z "$directory" ]; then
+    exit 0
+fi
+
+# Extract the directory name for the session name
+session_name="$(basename "$directory")"
+
+# Check if tmux session already exists
+if tmux has-session -t "${session_name^}" 2>/dev/null; then
+    tmux switch-client -t "${session_name^}"
+else
+    # Create new tmux session in the selected directory
+    tmux new-session -d -s "${session_name^}" -c "$directory"
+    # Switch to the new session
+    tmux switch-client -t "${session_name^}"
+fi

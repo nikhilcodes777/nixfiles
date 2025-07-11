@@ -1,0 +1,12 @@
+name: Web (npm)
+
+windows:
+  - name: Code
+    panes:
+      - nvim -c Oil
+  - name: Dev
+    panes:
+      - npm i
+  - name: Dev-Server
+    panes:
+      - npm run dev

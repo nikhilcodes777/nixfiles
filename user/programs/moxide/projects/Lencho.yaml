@@ -1,0 +1,4 @@
+name: Lencho
+
+root_dir: ~/dev/lencho
+template: Web (pnpm)

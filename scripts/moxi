@@ -1,0 +1,40 @@
+#!/usr/bin/env bash
+
+export FZF_DEFAULT_OPTS="
+	--color=fg:#797593,bg:#faf4ed,hl:#d7827e
+	--color=fg+:#575279,bg+:#f2e9e1,hl+:#d7827e
+	--color=border:#dfdad9,header:#286983,gutter:#faf4ed
+	--color=spinner:#ea9d34,info:#56949f
+	--color=pointer:#907aa9,marker:#b4637a,prompt:#797593"
+project_emoji=""
+template_emoji="󰨞"
+directory_emoji=""
+
+list=$(moxide list \
+    --format-project "$project_emoji {}"\
+    --format-template "$template_emoji {}"\
+    --format-directory "$directory_emoji {}"\
+)
+
+value=$(echo "$list" | \
+    fzf \
+    --no-sort \
+    --layout reverse \
+    --border rounded \
+    --no-scrollbar \
+    --pointer "->" \
+)
+
+IFS=' ' read -r emoji name <<< "$value"
+
+case "$emoji" in
+    $project_emoji)
+        moxide project start "$name"
+        ;;
+    $template_emoji)
+        moxide template start "$name"
+        ;;
+    $directory_emoji)
+        moxide dir start "$name"
+        ;;
+esac

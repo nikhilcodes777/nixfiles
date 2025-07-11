@@ -1,0 +1,13 @@
+name: Update
+
+windows:
+  - name: Config 
+    panes:
+      - nvim ~/.nixfiles/home.nix
+  
+  - name: Main
+    layout: even-vertical
+    panes:
+      - flatpak update -y
+      - nh home switch ~/.nixfiles
+      - nh os switch ~/.nixfiles

@@ -1,0 +1,4 @@
+name: Zerozen
+
+root_dir: ~/dev/zerozen
+template: Rust

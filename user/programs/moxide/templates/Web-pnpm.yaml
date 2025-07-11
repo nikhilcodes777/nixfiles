@@ -1,0 +1,12 @@
+name: Web (pnpm)
+
+windows:
+  - name: Code
+    panes:
+      - nvim -c Oil
+  - name: Dev
+    panes:
+      - pnpm i
+  - name: Dev-Server
+    panes:
+      - pnpm run dev

@@ -1,0 +1,14 @@
+name: Rust
+
+windows:
+  - name: code
+    panes:
+      - hx .
+  - name: dev
+    panes:
+      - echo Oxidation
+  - name: cargo
+    layout: even-horizontal
+    panes:
+      - bacon
+      - cargo build

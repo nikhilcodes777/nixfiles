@@ -1,0 +1,12 @@
+name: Web (bun)
+
+windows:
+  - name: Code
+    panes:
+      - nvim -c Oil
+  - name: Dev
+    panes:
+      - bun install
+  - name: Dev-Server
+    panes:
+      - bun run dev

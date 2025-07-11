@@ -1,0 +1,16 @@
+- name: "Obsidian"
+  path: "~/.local/space/Space/"
+
+- name: "Temp"
+  path: "~/.tmp"
+
+- name: "Home"
+  path: "~/"
+
+- name: "Notes"
+  path: "~/.local/notes"
+
+- name: "Nix"
+  path: "~/.nixfiles"
+
+
