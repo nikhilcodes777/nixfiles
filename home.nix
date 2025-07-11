@@ -21,6 +21,11 @@
     wiki-tui
     mpv
     gh
+    jq
+    vscode
+    httpie-desktop
+    htop
+    aria2
     lazygit
     direnv
     nodejs
